@@ -22,5 +22,8 @@ $('#twitter-button').on('click', function() {
       .then(data => {
         console.log('self data:', data);
       });
+    twitter.get('/1.1/friends/list.json?').then(data => {
+      console.log('friends:', data);
+    });
   });
 });
